@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouyang Zhangjun</title>
+    <link rel="stylesheet" href="./sources/icons/iconfont.css">
+    <link rel="stylesheet" href="index-en.css">
+</head>
+<body id="contentApp">
+    <!--顶部栏（手机版）-->
+    <div class="topBar-pv">
+        <button @click="handleMenus">
+            <span class="iconfont icon-sanheng" v-show="!control.isShowMenus"></span>
+            <span class="iconfont icon-cuowu" v-show="control.isShowMenus"></span>
+        </button>
+        <ul class="navigateList-pv" v-show="control.isShowMenus">
+            <li class="navigateItem-pv"><a href="#introduction">Introduction</a></li>
+            <li class="navigateItem-pv"><a href="#news">News</a></li>
+            <li class="navigateItem-pv"><a href="#education">Education</a></li>
+            <li class="navigateItem-pv"><a href="#achievement">Achievement</a></li>
+            <li class="navigateItem-pv"><a href="./index-zh.html">简体中文</a></li>
+        </ul>
+    </div>
+    <!--顶部栏-->
+    <div class="topBar">
+        <ul class="navigateList">
+            <li class="navigateItem"><a href="#introduction">Introduction</a></li>
+            <li class="navigateItem"><a href="#news">News</a></li>
+            <li class="navigateItem"><a href="#education">Education</a></li>
+            <li class="navigateItem"><a href="#achievement">Achievement</a></li>
+            <li class="navigateItem"><a href="./index-zh.html">简体中文</a></li>
+        </ul>
+    </div>
+    <!--主视栏-->
+    <div class="mainBar">
+        <!--侧边栏（手机端会隐藏）-->
+        <div class="sideBar">
+            <div style="height:20px;width:100%;background-color:transparent;"></div>
+            <img :src="content.avatar" class="avatar">
+            <span class="name">{{content_en.name}}</span>
+            <span class="university">{{content_en.university}}</span>
+            <div class="menus">
+                <a href="https://girls-band-cry.com/" class="menusItem"><span class="iconfont icon-dingwei icon"></span> <span>{{content_en.location}}</span></a>
+                <a href="mailto:1580714256@qq.com" class="menusItem"><span class="iconfont icon-youjian icon"></span> <span>Mail</span></a>
+                <a href="https://blog.csdn.net/Amiya8686" class="menusItem"><span class="iconfont icon-xinhao icon"></span> <span>Blog</span></a>
+                <a href="musicPlayer.html" class="menusItem"><span class="iconfont icon-yinle icon"></span> <span>Music</span></a>
+            </div>
+        </div>
+
+        <!--内容栏-->
+        <div class="contentBar">
+            <!--个人信息栏（PC端会隐藏）-->
+            <div class="infoBar">
+                <div class="left">
+                    <img :src="content.avatar" class="avatar">
+                    <div class="info">
+                        <p class="name">{{content_en.name}}</p>
+                        <p class="university">{{content_en.university}}</p>
+                    </div>
+                </div>
+                <div class="menus">
+                    <div class="menusItem"><a href="https://girls-band-cry.com/">
+                        <span class="iconfont icon-dingwei"></span>
+                        <p>{{content_en.location}}</p>
+                    </a></div>
+                    <div class="menusItem"><a href="mailto:1580714256@qq.com">
+                        <span class="iconfont icon-youjian"></span>
+                        <p>Mail</p>
+                    </a></div>
+                    <div class="menusItem"><a href="https://blog.csdn.net/Amiya8686">
+                        <span class="iconfont icon-xinhao"></span>
+                        <p>Blog</p>
+                    </a></div>
+                    <div class="menusItem"><a href="musicPlayer.html">
+                        <span class="iconfont icon-yinle"></span>
+                        <p>Music</p>
+                    </a></div>
+                </div>
+            </div>
+            <div class="splitLine"></div>
+            <div id="article" class="article">
+                <div id="introduction" class="introduction">
+                    <p>I am currently studying at Sun Yat-sen University, which is known as the "pillar of the southern sky". I have excellent academic performance and am passionate about technology, but I am extremely lacking in project practical experience.
+                    </p>
+                    <p>Calm and composed, with clear goals and strong resistance to pressure, but not good at communication. I sincerely request all the experts to lead me in doing projects.                      
+                    </p>
+                </div>
+                <hr>
+                <div id="news" class="news">
+                    <span class="iconfont icon-daochu1024-07 icon"></span>
+                    <h class="title">News</h>
+                    <ul>
+                        <li>2025.7: First time trying JS, the front-end is really amazing</li>
+                        <li>2025.4: OS Network Mixed Doubles, let the horses come over!!!</li>
+                        <li>2024.9: Finally looking forward to the data structure and starting to explore the mystery of quick sorting</li>
+                        <li>2024.4: I have been struggling with the C language for a long time, and I am surprised by the convenience of C++STL</li>
+                        <li>2023.9: Computer novices are encountering C language for the first time and trying their best but unable to overcome it</li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="education" class="education">
+                    <span class="iconfont icon-G-book icon"></span>
+                    <h class="title"> Education</h>
+                    <ul>
+                        <li>2023.9-: Undergraduate: Sun Yat sen University</li>
+                        <li>2020.9-2023.7: High School: Shunde Li Zhaoji Middle School</li>
+                        <li>2016.9-2020.7: Junior High School: Jun'an Jian'an Junior High School</li>
+                        <li>2010.9-2016.7: Primary School: Tianlian Primary School</li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="achievement" class="achievement">
+                    <span class="iconfont icon-jiangbei- icon"></span>
+                    <h class="title">Achievement</h>
+                    <ul>
+                        <li>2024.1：The flight system is successful (although it's terrible)</li>
+                        <li>2024.10：Greedy Snake Project Successfully Completed</li>
+                        <li>2024.7：GPA 4.0, small improvement</li>
+                        <li>2024.1：GPA 3.9, Victory in First Battle of University</li>
+                        <li>2023.11：After much contemplation, the essence of the Tower of Hanoi is finally revealed</li>
+                        <li>2023.6：Winning the college entrance examination (only for one's own school)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="module">
+    import {createApp} from "./vue.esm-browser.js";
+    import {contentModule} from "./contentModule.js";
+    const contentApp = createApp(contentModule);
+    contentApp.mount("#contentApp");
+</script>
+
+</html>
+
+
